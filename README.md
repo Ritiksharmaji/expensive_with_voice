@@ -78,4 +78,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 5)  output is ![alt text](image.png)
 6)  adding the form component 
 7)  output is ![alt text](image-1.png)
+8)  adding the list of tancatin of money list component
+9)  output is ![alt text](image-2.png)
 
