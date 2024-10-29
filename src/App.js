@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid } from '@material-ui/core';
 import Details from './components/Details/Details';
 import useStyles from './styles'
+import Main from './components/Main/Main';
 
 function App() {
 
@@ -14,7 +15,9 @@ function App() {
           <Details title="Income" />
         </Grid>
         <Grid  item xs={12} sm={3} >
-         main
+         {/* main */}
+         <Main/>
+         
         </Grid>
        
         <Grid item xs={12} sm={4} >

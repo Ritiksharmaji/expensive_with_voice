@@ -73,3 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## ------------- selph--------------------------------------------------------------------
 1) npx create-react-app ./
 2) npm install react@16.12.0 react-dom@16.12.0 @material-ui/core @material-ui/icons @material-ui/lab @speechly/react-client @speechly/react-ui chart.js react-chartjs-2 uuid --legacy-peer-deps
+3) ## -----------------------------
+4)  adding the mainCOmponent 
+5)  output is ![alt text](image.png)
+
