@@ -9,7 +9,7 @@ export default function Main() {
     const classes = useStyles();
 
   return (
-    <div>
+    
         <Card className={classes.root}>
         <CardHeader title="Expense Tracker" subheader="Powered by Speechly" />
 
@@ -30,13 +30,12 @@ export default function Main() {
       <CardContent className={classes.cartContent}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            {/* <List /> */}
-            <List/>
+            <List />
           </Grid>
         </Grid>
       </CardContent>
 
         </Card>
-    </div>
+ 
   )
 }
