@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardHeader, CardContent, Typography, Grid, Divider } from '@material-ui/core';
 
 import useStyles from './styles';
+import Form from './Form/Form';
 
 export default function Main() {
     const classes = useStyles();
@@ -21,6 +22,7 @@ export default function Main() {
 
         <Divider className={classes.divider} />
        {/* form */}
+       <Form/>
 
       </CardContent>
       {/* other one */}

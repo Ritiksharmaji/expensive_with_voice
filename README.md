@@ -76,4 +76,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 3) ## -----------------------------
 4)  adding the mainCOmponent 
 5)  output is ![alt text](image.png)
+6)  adding the form component 
+7)  output is ![alt text](image-1.png)
 
