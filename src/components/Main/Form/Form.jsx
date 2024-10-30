@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import { TextField, Typography, Grid, Button, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
 import { v4 as uuidv4 } from 'uuid';
 import { ExpenseTrackerContext } from '../../../context/context';
@@ -16,10 +16,35 @@ const initialState = {
 function Form() {
 
     const classes = useStyles()
-const[formData, setFormData] = useState(initialState)
+    const[formData, setFormData] = useState(initialState)
+
+    // getting the add function using the useContext() Hook
+    const { addTransaction } = useContext(ExpenseTrackerContext);
 
 // log the data
 console.log(formData)
+
+      const createTransaction = () => {
+
+        // creating a single transaction 
+        const transaction = {...formData, amount: Number(formData.amount), id:uuidv4()}
+
+        //calling the method
+        addTransaction(transaction)
+        setFormData(initialState)
+
+        // if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
+
+        // if (incomeCategories.map((iC) => iC.type).includes(formData.category)) {
+        //   setFormData({ ...formData, type: 'Income' });
+        // } else if (expenseCategories.map((iC) => iC.type).includes(formData.category)) {
+        //   setFormData({ ...formData, type: 'Expense' });
+        // }
+
+        // setOpen(true);
+        // addTransaction({ ...formData, amount: Number(formData.amount), id: uuidv4() });
+        // setFormData(initialState);
+      };
 
   return (
     <div>
@@ -57,7 +82,7 @@ console.log(formData)
       <Grid item xs={6}>
         <TextField fullWidth label="Date" type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: e.target.value })} />
       </Grid>
-      <Button className={classes.button} variant="outlined" color="primary" fullWidth >Create</Button>
+      <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction} >Create</Button>
     
 
 </Grid>

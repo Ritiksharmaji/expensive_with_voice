@@ -84,6 +84,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 11) output is ![alt text](image-3.png)
 12) handle the input filed and data filed for this project using the useContext() Hook
 13) output is ![alt text](image-4.png)
-14) 
+14) adding the single trancation 
+15) ![alt text](image-5.png)
+16) 
 
 

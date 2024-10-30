@@ -20,6 +20,9 @@ export const Provider = ({ children }) => {
     dispatch({ type: 'ADD_TRANSACTION', payload: transaction });
   };
 
+  // loging the trasaction
+  console.log(transactions)
+
   const balance = transactions.reduce((acc, currVal) => (currVal.type === 'Expense' ? acc - currVal.amount : acc + currVal.amount), 0);
 
   return (
