@@ -92,9 +92,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 19) ![alt text](image-7.png)
 20) apply the particular date formate
 21) output is ![alt text](image-8.png)
-22) display thecatgory based on selected the type
+22) display the catgory based on selected the type
 23) output is ![alt text](image-9.png)
 24) for expensive 
 25) ![alt text](image-10.png)
+26) ------------ now appy the chart
+27) for that we are creating a custume hook useTransactions.js
+28) complete without voice feacture 
+29) ![alt text](image-11.png)
 
 
