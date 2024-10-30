@@ -88,6 +88,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 15) ![alt text](image-5.png)
 16) adding the single trancation in state means in UI 
 17) adding the single trancation ![alt text](image-6.png)
-18) 
+18) deleting a trasaction from state
+19) ![alt text](image-7.png)
+20) 
 
 

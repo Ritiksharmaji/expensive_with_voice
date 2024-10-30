@@ -14,6 +14,7 @@ export const Provider = ({ children }) => {
   // action creators
   const deleteTransaction = (id) => {
     dispatch({ type: 'DELETE_TRANSACTION', payload: id });
+    console.log("transaction had deleted")
   };
 
   const addTransaction = (transaction) => {
