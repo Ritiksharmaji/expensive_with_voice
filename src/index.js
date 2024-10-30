@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 //import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { Provider } from './context/context';
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -10,6 +11,10 @@ import App from './App';
 //     <App />
 //   </React.StrictMode>
 // );
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider>
+    <App />
+    </Provider>
+, document.getElementById('root'));
 
 

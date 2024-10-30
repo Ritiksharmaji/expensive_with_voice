@@ -82,4 +82,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 9)  output is ![alt text](image-2.png)
 10) displaying the multiple list 
 11) output is ![alt text](image-3.png)
+12) handle the input filed and data filed for this project using the useContext() Hook
+13) output is ![alt text](image-4.png)
+14) 
+
 
