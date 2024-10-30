@@ -29,7 +29,6 @@ export const Provider = ({ children }) => {
     <ExpenseTrackerContext.Provider value={{
     //  appName:"Expenssive Tracker"
     transactions,
-    balance,
     deleteTransaction,
     addTransaction,
     
