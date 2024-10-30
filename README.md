@@ -90,6 +90,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 17) adding the single trancation ![alt text](image-6.png)
 18) deleting a trasaction from state
 19) ![alt text](image-7.png)
-20) 
+20) apply the particular date formate
+21) output is ![alt text](image-8.png)
+22) display thecatgory based on selected the type
+23) output is ![alt text](image-9.png)
+24) for expensive 
+25) ![alt text](image-10.png)
 
 

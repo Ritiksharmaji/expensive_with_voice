@@ -3,13 +3,14 @@ import { TextField, Typography, Grid, Button, FormControl, InputLabel, Select, M
 import { v4 as uuidv4 } from 'uuid';
 import { ExpenseTrackerContext } from '../../../context/context';
 import useStyles from './styles';
-
+import { incomeCategories,expenseCategories } from '../../../constants/categories';
+import formatDate from '../../../utils/formatDate';
 
 const initialState = {
   amount: '',
   category: '',
   type: 'Income',
-  date: new Date(),
+  date: formatDate(new Date()),
 };
 
 
@@ -21,30 +22,21 @@ function Form() {
     // getting the add function using the useContext() Hook
     const { addTransaction } = useContext(ExpenseTrackerContext);
 
-// log the data
-console.log(formData)
+      // log the data
+      console.log(formData)
 
       const createTransaction = () => {
-
         // creating a single transaction 
         const transaction = {...formData, amount: Number(formData.amount), id:uuidv4()}
-
         //calling the method
         addTransaction(transaction)
         setFormData(initialState)
-
-        // if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
-
-        // if (incomeCategories.map((iC) => iC.type).includes(formData.category)) {
-        //   setFormData({ ...formData, type: 'Income' });
-        // } else if (expenseCategories.map((iC) => iC.type).includes(formData.category)) {
-        //   setFormData({ ...formData, type: 'Expense' });
-        // }
-
-        // setOpen(true);
-        // addTransaction({ ...formData, amount: Number(formData.amount), id: uuidv4() });
-        // setFormData(initialState);
+        
       };
+
+      // to set the category based on choose the type(based on expensive or income )
+      const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories 
+
 
   return (
     <div>
@@ -70,8 +62,9 @@ console.log(formData)
         <FormControl fullWidth>
           <InputLabel>Category</InputLabel>
           <Select value={formData.category} onChange={(e) => setFormData({ ...formData, category: e.target.value })}>
-             <MenuItem value="business">Business</MenuItem>
-             <MenuItem value="school">school</MenuItem>
+             {/* <MenuItem value="business">Business</MenuItem>
+             <MenuItem value="school">school</MenuItem> */}
+            {selectedCategories.map((c) => <MenuItem key={c.type} value={c.type}>{c.type}</MenuItem>)}
           </Select>
         </FormControl>
       </Grid>
@@ -80,7 +73,7 @@ console.log(formData)
         <TextField type="number" label="Amount" value={formData.amount} onChange={(e) => setFormData({ ...formData, amount: e.target.value })}  fullWidth />
       </Grid>
       <Grid item xs={6}>
-        <TextField fullWidth label="Date" type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: e.target.value })} />
+        <TextField fullWidth label="Date" type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: formatDate(e.target.value) })} />
       </Grid>
       <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction} >Create</Button>
     
